@@ -35,11 +35,53 @@
             height: auto;
             margin-top: 20px;
         }
+		
+		/* 新增的掉落星星动画的CSS规则 */
+        .star {
+            position: absolute;
+			top: 0; /* 让星星从页面顶部开始下落 */
+            z-index: 999; /* 确保星星的层级高于页面上的文字 */
+            width: 10px;
+            height: 10px;
+            background-color: yellow;
+            border-radius: 50%;
+            box-shadow: 0 0 8px yellow;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+		
     </style>
 </head>
 <body>
-    <h1>爱你，老婆</h1>
+    <script>
+	// 创建星星并添加到body中
+	function createStar() {
+		const star = document.createElement('div');
+		star.className = 'star';
+		star.style.left = `${Math.random() * 100}vw`;
+		star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+		star.style.animationName = 'fall';
+		document.body.appendChild(star);
+		
+		// 一段时间后移除星星
+		setTimeout(() => {
+			star.remove();
+		}, star.style.animationDuration.replace('s', '') * 1000);
+	}
+
+	// 每隔一段时间创建一个新星星
+	setInterval(createStar, 300);
+	</script>
+	
+	<h1>爱你，老婆</h1>
     <p>这是一段居中对齐的文本，字体为20像素大小。</p>
+	<img src="bb.jpg" alt="图片描述文本" width="500" height="600">
     <!-- 更多的HTML内容 -->
+
 </body>
 </html>
