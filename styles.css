@@ -71,3 +71,15 @@ img {
         background-color: #111; /* 悬停时的背景颜色 */
     }
 /* 设置两个菜单的格式 */
+
+/* 设置音乐播放器的位置 */
+nav .player {
+    float: right; /* 使播放器在右边 */
+    height: 48px; /* 音乐播放器的高度 */
+    line-height: 48px; /* 设置行高与播放器高度一致，使其垂直居中 */
+}
+
+audio#audioPlayer {
+    margin: auto; /* 自动边距对齐 */
+    vertical-align: middle; /* 垂直居中 */
+}
