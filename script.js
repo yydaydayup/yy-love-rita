@@ -13,8 +13,7 @@ function createStar() {
     }, star.style.animationDuration.replace('s', '') * 1000);
 }
 
-// 每隔一段时间创建一个新星星
-setInterval(createStar, 300);
+
 
 
 let audio = new Audio('天天 - 陶喆.mp3');
