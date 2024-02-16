@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小乔show</title>
+    <!-- 链接样式表 -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	// 每隔一段时间创建一个新星星
+	setInterval(createStar, 300);
+	<!-- 播放和暂停按钮 -->
+    <button id="playPauseBtn">播放/暂停</button>
+
+    <!-- 音频进度条 -->
+    <input type="range" id="progressBar" value="0" max="100" step="1">
+
+    <script src="script.js"></script>
+    <h1>展示！</h1>
+    <img src="cutegirl.jpg" alt="图片描述文本" width="500" height="600">
+</body>
+</html>
