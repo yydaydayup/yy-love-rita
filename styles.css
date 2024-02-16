@@ -96,4 +96,7 @@ audio#audioPlayer {
     animation: spin 4s linear infinite; /* 设置动画效果 */
     display: inline-block; /* 设置为内联块元素 */
     vertical-align: middle; /*
+    position: relative;
+    top: -5px; 
+}
 
