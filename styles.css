@@ -83,3 +83,17 @@ audio#audioPlayer {
     margin: auto; /* 自动边距对齐 */
     vertical-align: middle; /* 垂直居中 */
 }
+
+/* 设置转动的图片 */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#rotatingImg {
+    width: 50px; /* 设置图片宽度 */
+    height: 50px; /* 设置图片高度 */
+    animation: spin 4s linear infinite; /* 设置动画效果 */
+    display: inline-block; /* 设置为内联块元素 */
+    vertical-align: middle; /*
+
