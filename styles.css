@@ -97,6 +97,6 @@ audio#audioPlayer {
     display: inline-block; /* 设置为内联块元素 */
     vertical-align: middle; /*
     position: relative;
-    top: -5px; 
+    top: -0px; 
 }
 
