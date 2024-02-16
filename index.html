@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- 播放和暂停按钮 -->
+    // 每隔一段时间创建一个新星星
+	setInterval(createStar, 300);
+	<!-- 播放和暂停按钮 -->
     <button id="playPauseBtn">播放/暂停</button>
 
     <!-- 音频进度条 -->
