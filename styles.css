@@ -1,0 +1,47 @@
+/* 这是内联样式，如果你不想单独的styles.css文件，你也可以这么做 */
+body {
+    background-color: #f9f9f9; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+}
+
+p {
+    color: #666;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
+    text-indent: 2em; /* 首行缩进两个字符 */
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+    height: auto;
+    margin-top: 20px;
+}
+/* 新增的掉落星星动画的CSS规则 */
+.star {
+    position: absolute;
+    top: 0; /* 让星星从页面顶部开始下落 */
+    z-index: 999; /* 确保星星的层级高于页面上的文字 */
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 8px yellow;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
