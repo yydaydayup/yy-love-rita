@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片画廊</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- 图片画廊容器 -->
+<div id="gallery-container">
+    <!-- 单张图片容器 -->
+    <div class="image-container">
+        <img src="path-to-your-image1.jpg" alt="Image 1" class="gallery-image">
+    </div>
+    <div class="image-container">
+        <img src="path-to-your-image2.jpg" alt="Image 2" class="gallery-image">
+    </div>
+    <!-- 可以继续添加更多的图片容器 -->
+</div>
+
+<!-- 放大的图片显示器，开始时隐藏 -->
+<div id="lightbox" class="hidden">
+    <button id="prev">←</button>
+    <img src="" alt="" id="lightbox-image">
+    <button id="next">→</button>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
