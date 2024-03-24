@@ -23,23 +23,23 @@
             </li>
         </ul>
     </nav>
-<!-- 图片画廊容器 -->
-<div id="gallery-container">
-    <!-- 单张图片容器 -->
-    <div class="image-container">
-        <img src="照片墙1.jpg" alt="Image 1" class="gallery-image">
-    </div>
-    <div class="image-container">
-        <img src="照片墙2.jpg" alt="Image 2" class="gallery-image">
-    </div>
-    <!-- 可以继续添加更多的图片容器 -->
-</div>
-
-<!-- 放大的图片显示器，开始时隐藏 -->
-<div id="lightbox" class="hidden">
-    <button id="prev">←</button>
-    <img src="" alt="" id="lightbox-image">
-    <button id="next">→</button>
+<!-- 图片画廊容器 -->  
+<div id="gallery-container">  
+    <!-- 单张图片容器 -->  
+    <div class="image-container" onclick="openLightbox(1)">  
+        <img src="照片墙1.jpg" alt="Image 1" class="gallery-image">  
+    </div>  
+    <div class="image-container" onclick="openLightbox(2)">  
+        <img src="照片墙2.jpg" alt="Image 2" class="gallery-image">  
+    </div>  
+    <!-- 可以继续添加更多的图片容器 -->  
+</div>  
+  
+<!-- 放大的图片显示器，开始时隐藏 -->  
+<div id="lightbox" class="hidden">  
+    <button id="prev" onclick="changeSlide(-1)">←</button>  
+    <img src="" alt="" id="lightbox-image">  
+    <button id="next" onclick="changeSlide(1)">→</button>  
 </div>
 
 <script src="script.js"></script>
