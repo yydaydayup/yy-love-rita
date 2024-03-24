@@ -15,39 +15,32 @@ function createStar() {
 // 每隔一段时间创建一个新星星
 setInterval(createStar, 300);
 
-// 获取所有图库中的图片和放大显示器
-const images = document.querySelectorAll('.gallery-image');
-const lightbox = document.getElementById('lightbox');
-const lightboxImage = document.getElementById('lightbox-image');
-let currentIndex = 0;
-
-// 打开放大显示器的函数
-function openLightbox(index) {
-    currentIndex = index;
-    lightboxImage.src = images[index].src;
-    lightbox.classList.remove('hidden');
+let slideIndex = 0;  
+showSlides();  
+  
+function showSlides() {  
+    let i;  
+    let slides = document.getElementsByClassName("image-container");  
+    for (i = 0; i < slides.length; i++) {  
+        slides[i].style.display = "inline-block";  
+    }  
+}  
+  
+function openLightbox(index) {  
+    slideIndex = index;  
+    document.getElementById("lightbox").style.display = "block";  
+    document.getElementById("lightbox-image").src = document.getElementsByClassName("gallery-image")[slideIndex - 1].src;  
+}  
+  
+function changeSlide(n) {  
+    showSlides();  
+    let slides = document.getElementsByClassName("gallery-image");  
+    if (n > 0 && slideIndex < slides.length) {  
+        slideIndex++;  
+    }  
+    if (n < 0 && slideIndex > 1) {  
+        slideIndex--;  
+    }  
+    document.getElementById("lightbox-image").src = slides[slideIndex - 1].src;  
 }
-
-// 关闭放大显示器
-lightbox.addEventListener('click', function() {
-    lightbox.classList.add('hidden');
-});
-
-// 为每张图片添加点击事件
-images.forEach((image, index) => {
-    image.addEventListener('click', () => openLightbox(index));
-});
-
-// 添加左右按钮的事件
-document.getElementById('prev').addEventListener('click', () => {
-    if(currentIndex > 0) {
-        openLightbox(currentIndex - 1);
-    }
-});
-
-document.getElementById('next').addEventListener('click', () => {
-    if(currentIndex < images.length - 1) {
-        openLightbox(currentIndex + 1);
-    }
-});
 
